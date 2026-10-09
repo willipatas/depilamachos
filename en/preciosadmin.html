@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed-dim":"#e9c349","inverse-on-surface":"#2f3035","on-tertiary-container":"#5c4002","surface-overlay":"#22252B","surface-bright":"#37393e","on-primary-container":"#554300","on-tertiary":"#422c00","secondary-fixed-dim":"#accfb8","surface-base":"#0F1115","error-container":"#93000a","on-primary-fixed-variant":"#574500","gold-light":"#DFBD69","surface-tint":"#e9c349","on-error":"#690005","on-secondary-fixed-variant":"#2e4d3c","tertiary":"#f3c880","background":"#111317","secondary-container":"#304f3e","tertiary-container":"#d5ad68","on-tertiary-fixed-variant":"#5e4204","outline-variant":"#4d4635","surface-card":"#17191E","on-error-container":"#ffdad6","primary-fixed":"#ffe088","on-surface":"#e2e2e8","inverse-surface":"#e2e2e8","emerald-light":"#2D5A43","surface-container-highest":"#333539","charcoal-border":"rgba(212, 175, 55, 0.15)","on-primary":"#3c2f00","outline":"#99907c","surface":"#111317","on-secondary-container":"#9ec0aa","on-surface-variant":"#d0c5af","surface-variant":"#333539","tertiary-fixed":"#ffdea9","tertiary-fixed-dim":"#eac079","on-primary-fixed":"#241a00","gold-muted":"#C5A059","on-secondary-fixed":"#012113","secondary-fixed":"#c7ebd4","secondary":"#accfb8","inverse-primary":"#735c00","surface-dim":"#111317","on-tertiary-fixed":"#271900","surface-container":"#1e2026","emerald-accent":"#1C3B2B","surface-container-lowest":"#0c0e12","error":"#ffb4ab","primary-container":"#d4af37","surface-container-high":"#282a2e","on-background":"#e2e2e8","primary":"#f2ca50","ivory-white":"#FAF8F5","surface-container-low":"#1a1c20","on-secondary":"#173627"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-md":"1rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-xs":"0.25rem","gutter":"1.5rem","margin":"3rem","space-lg":"1.5rem","space-sm":"0.5rem","space-xl":"2.5rem"},fontFamily:{"label-md":["Inter"],"headline-2xl":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-2xl-mobile":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-xl":["Plus Jakarta Sans"],"label-sm":["Inter"]},fontSize:{"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-2xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-2xl-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.04em","fontWeight":"600"}],"headline-xl-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"headline-sm":["18px",{"lineHeight":"26px","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-xl":["40px",{"lineHeight":"48px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.08em","fontWeight":"500"}]}}}};</script>
+    <!-- SEO Tags -->
+    <title>Admin Panel | DepilaMachos</title>
+    <meta name="description" content="Admin panel.">
+    <meta name="keywords" content="">
+    <meta name="robots" content="noindex, nofollow">
+    
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://depilamachos.com.co/en/preciosadmin.html">
+    <meta property="og:title" content="Admin Panel | DepilaMachos">
+    <meta property="og:description" content="Admin panel.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/aida/AEtjO1UJhzTLwJ634-E0KVv2zzx1P9-xjRXf8q27iJlV4h0JaxZkBDt128SlF7TPbP-V9hOURmkjL1o6XLRjN2i1EDTufpdreGUXjEXQxOi6UsVExhkvpUVW9Hy9QW5Qd8_nygXnI1ZF2f9m2zztATWHO_n8szi4QPqH3tG6L9kCn472IFSn4U9ba3QZfY8JFKYH477BX-0Hkj5WdhDnTw2AT19kSD6vg8aBsxSqeswQrZ_hug0ZRmYJjPhOjA">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- End SEO Tags -->
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "DepilaMachos",
+  "image": "https://lh3.googleusercontent.com/aida/AEtjO1UJhzTLwJ634-E0KVv2zzx1P9-xjRXf8q27iJlV4h0JaxZkBDt128SlF7TPbP-V9hOURmkjL1o6XLRjN2i1EDTufpdreGUXjEXQxOi6UsVExhkvpUVW9Hy9QW5Qd8_nygXnI1ZF2f9m2zztATWHO_n8szi4QPqH3tG6L9kCn472IFSn4U9ba3QZfY8JFKYH477BX-0Hkj5WdhDnTw2AT19kSD6vg8aBsxSqeswQrZ_hug0ZRmYJjPhOjA",
+  "@id": "https://depilamachos.com.co",
+  "url": "https://depilamachos.com.co",
+  "telephone": "+573138934136",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Barrio Marsella",
+    "addressLocality": "Bogotá",
+    "addressRegion": "Bogotá D.C.",
+    "addressCountry": "CO"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "10:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/depilamachos",
+    "https://www.instagram.com/depilamachos"
+  ],
+  "description": "Exclusive male waxing and relaxing massage studio in Marsella, Bogota."
+}
+    </script>
+</head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-base/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.65)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><img alt="Logo DepilaMachos" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UJhzTLwJ634-E0KVv2zzx1P9-xjRXf8q27iJlV4h0JaxZkBDt128SlF7TPbP-V9hOURmkjL1o6XLRjN2i1EDTufpdreGUXjEXQxOi6UsVExhkvpUVW9Hy9QW5Qd8_nygXnI1ZF2f9m2zztATWHO_n8szi4QPqH3tG6L9kCn472IFSn4U9ba3QZfY8JFKYH477BX-0Hkj5WdhDnTw2AT19kSD6vg8aBsxSqeswQrZ_hug0ZRmYJjPhOjA"/><span class="font-headline-sm text-headline-sm tracking-wider uppercase text-ivory-white">DepilaMachos</span></div><nav class="hidden xl:flex items-center gap-space-lg" data-active-classes="text-primary font-label-md"><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="inicio" href="index.html">Home</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="servicios" href="index.html#servicios">Services</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="calculadora-y-precios" href="calculadora-cliente.html">Calculator and Prices</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="condiciones" href="condiciones.html">Terms</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="ubicacion" href="index.html#ubicacion">Location</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center bg-surface-container rounded-lg px-space-xs py-space-xs"><button class="px-space-xs py-space-xs rounded font-label-sm text-label-sm text-primary" type="button">ES</button><span class="text-outline-variant font-label-sm text-label-sm">/</span><a href="en/preciosadmin.html" class="px-space-xs py-space-xs rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface" style="cursor: pointer;">EN</a></div><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-sm rounded-lg bg-gradient-to-r from-gold-light via-primary-container to-gold-muted text-on-primary font-label-lg text-label-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 shadow-[0_16px_36px_-8px_rgba(0,0,0,0.65)]" href="https://api.whatsapp.com/send/?phone=573138934136&text=Hola%2C+estoy+interesado+en+los+servicios+vistos+en+la+web&type=phone_number&app_absent=0" rel="noopener noreferrer" target="_blank">Schedule Appointment (WhatsApp)</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface-base min-h-screen"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl">
+<!-- Top Administrative Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-xl pb-space-lg border-b border-white/5">
+<div class="space-y-space-sm max-w-3xl">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-gold-light text-label-sm font-label-sm uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          ADMIN MODE • MANUAL RATE and DISCOUNT ADJUSTMENT
+        </div>
+<h1 class="font-headline-2xl text-headline-2xl text-ivory-white tracking-tight">
+          Session Calculator and Quoter <span class="text-primary font-headline-xl text-headline-xl block lg:inline text-gold-muted font-normal">(Admin)</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+          Internal tool for flexible pricing, customization of rates by body zone, addition of wellness treatments, and generation of a summarized order for WhatsApp.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-card hover:bg-surface-container text-on-surface hover:text-ivory-white font-label-md text-label-md transition-colors shadow-sm" id="btn-reset-all" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+          Reset Form
+        </button>
+<div class="px-space-md py-space-sm rounded-lg bg-surface-overlay text-on-surface-variant font-label-sm text-label-sm flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">shield</span>
+          2026 Base Rates
+        </div>
+</div>
+</div>
+<!-- Main 2-Column Workstation Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Zones Selection (8 Cols on Desktop) -->
+<div class="lg:col-span-7 xl:col-span-8 space-y-space-xl">
+<!-- SECTION 1: ZONAS CON COBERTURA GRADUABLE -->
+<div class="space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-headline-sm text-headline-sm">1</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-ivory-white">Adjustable Coverage Zones</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select coverage subtype and technique, or enter a specific administrative value.</p>
+</div>
+</div>
+</div>
+<!-- Card: Espalda -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card transition-all" data-zone-id="espalda" data-zone-name="Male Back">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">accessibility_new</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Male Back</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Dorsal and lumbar area</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-lg">
+<button class="variant-btn px-space-sm py-1 rounded font-label-sm text-label-sm transition-all bg-emerald-accent text-secondary" data-variant="Completa" type="button">Full</button>
+<button class="variant-btn px-space-sm py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Solo Alta" type="button">Upper Only</button>
+<button class="variant-btn px-space-sm py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Solo Baja" type="button">Lower Only</button>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<button class="tech-chip text-left p-space-sm rounded-lg bg-surface-overlay hover:bg-surface-container transition-all flex flex-col justify-between" data-base-price="46000" data-tech="Cera" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Warm Wax</span>
+<span class="font-label-md text-label-md text-gold-light mt-1">$46.000</span>
+</button>
+<button class="tech-chip text-left p-space-sm rounded-lg bg-surface-overlay hover:bg-surface-container transition-all flex flex-col justify-between" data-base-price="23000" data-tech="Máquina" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Machine Trim</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">$23.000</span>
+</button>
+<button class="tech-chip text-left p-space-sm rounded-lg bg-surface-overlay hover:bg-surface-container transition-all flex flex-col justify-between" data-base-price="33000" data-tech="Presto" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Razor</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">$33.000</span>
+</button>
+<div class="flex flex-col justify-between bg-surface-base p-space-xs rounded-lg">
+<span class="font-label-sm text-label-sm text-gold-muted px-1">Manual Rate COP</span>
+<input class="custom-price-input w-full bg-surface-card px-2 py-1 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-container placeholder:text-outline text-right" min="0" placeholder="$ Other Value" step="1000" type="number"/>
+</div>
+</div>
+</div>
+<!-- Card: Brazos and Extremidades -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card transition-all" data-zone-id="brazos" data-zone-name="Arms and Extremities">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">front_hand</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Arms and Extremities</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Shoulders, biceps and forearms</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-lg">
+<button class="variant-btn px-space-sm py-1 rounded font-label-sm text-label-sm transition-all bg-emerald-accent text-secondary" data-variant="Completos" type="button">Full</button>
+<button class="variant-btn px-space-sm py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Medio Brazo" type="button">Half Arm</button>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<button class="tech-chip text-left p-space-sm rounded-lg bg-surface-overlay hover:bg-surface-container transition-all flex flex-col justify-between" data-base-price="60000" data-tech="Cera" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Warm Wax</span>
+<span class="font-label-md text-label-md text-gold-light mt-1">$60.000</span>
+</button>
+<button class="tech-chip text-left p-space-sm rounded-lg bg-surface-overlay hover:bg-surface-container transition-all flex flex-col justify-between" data-base-price="30000" data-tech="Máquina" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Machine Trim</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">$30.000</span>
+</button>
+<button class="tech-chip text-left p-space-sm rounded-lg bg-surface-overlay hover:bg-surface-container transition-all flex flex-col justify-between" data-base-price="42000" data-tech="Presto" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Razor</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">$42.000</span>
+</button>
+<div class="flex flex-col justify-between bg-surface-base p-space-xs rounded-lg">
+<span class="font-label-sm text-label-sm text-gold-muted px-1">Manual Rate COP</span>
+<input class="custom-price-input w-full bg-surface-card px-2 py-1 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-container placeholder:text-outline text-right" min="0" placeholder="$ Other Value" step="1000" type="number"/>
+</div>
+</div>
+</div>
+<!-- Card: Piernas and Muslos -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card transition-all" data-zone-id="piernas" data-zone-name="Legs and Thighs">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">directions_walk</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Legs and Thighs</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quadriceps, calves and knees</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-lg">
+<button class="variant-btn px-space-sm py-1 rounded font-label-sm text-label-sm transition-all bg-emerald-accent text-secondary" data-variant="Completas" type="button">Full</button>
+<button class="variant-btn px-space-sm py-1 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Media Pierna" type="button">Half Leg</button>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<button class="tech-chip text-left p-space-sm rounded-lg bg-surface-overlay hover:bg-surface-container transition-all flex flex-col justify-between" data-base-price="68000" data-tech="Cera" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Warm Wax</span>
+<span class="font-label-md text-label-md text-gold-light mt-1">$68.000</span>
+</button>
+<button class="tech-chip text-left p-space-sm rounded-lg bg-surface-overlay hover:bg-surface-container transition-all flex flex-col justify-between" data-base-price="34000" data-tech="Máquina" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Machine Trim</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">$34.000</span>
+</button>
+<button class="tech-chip text-left p-space-sm rounded-lg bg-surface-overlay hover:bg-surface-container transition-all flex flex-col justify-between" data-base-price="48000" data-tech="Presto" type="button">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Razor</span>
+<span class="font-label-md text-label-md text-on-surface mt-1">$48.000</span>
+</button>
+<div class="flex flex-col justify-between bg-surface-base p-space-xs rounded-lg">
+<span class="font-label-sm text-label-sm text-gold-muted px-1">Manual Rate COP</span>
+<input class="custom-price-input w-full bg-surface-card px-2 py-1 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-container placeholder:text-outline text-right" min="0" placeholder="$ Other Value" step="1000" type="number"/>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: ZONAS TORÁCICAS, CORPORALES and ÍNTIMAS -->
+<div class="space-y-space-md">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-headline-sm text-headline-sm">2</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-ivory-white">Thoracic, Body and Intimate Zones</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maximum precision hygiene, comfort, and irritation reduction with hypoallergenic techniques.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Axilas -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="axilas" data-zone-name="Axilas">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Armpits</h3>
+<span class="font-label-sm text-label-sm text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">Quick 15m</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="16000" data-tech="Cera" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wax</div>
+<div class="font-label-md text-label-md text-gold-light mt-0.5">$16.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="16000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Mach.</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$16.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="16000" data-tech="Presto" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Razor</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$16.000</div>
+</button>
+</div>
+<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
+<!-- Pecho -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="pecho" data-zone-name="Male Chest">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Chest</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pectorals</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="24000" data-tech="Cera" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wax</div>
+<div class="font-label-md text-label-md text-gold-light mt-0.5">$24.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="12000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Mach.</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$12.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="17000" data-tech="Presto" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Razor</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$17.000</div>
+</button>
+</div>
+<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
+<!-- Abdomen -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="abdomen" data-zone-name="Abdomen">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Abdomen</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Linea alba and belly</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="28000" data-tech="Cera" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wax</div>
+<div class="font-label-md text-label-md text-gold-light mt-0.5">$28.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="14000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Mach.</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$14.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="20000" data-tech="Presto" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Razor</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$20.000</div>
+</button>
+</div>
+<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
+<!-- Pubis -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="pubis" data-zone-name="Pubis">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Pubis</h3>
+<span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Intimate Zone</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="16000" data-tech="Cera" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wax</div>
+<div class="font-label-md text-label-md text-gold-light mt-0.5">$16.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="16000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Mach.</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$16.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="16000" data-tech="Presto" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Razor</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$16.000</div>
+</button>
+</div>
+<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
+<!-- Escroto -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="escroto" data-zone-name="Escroto">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Scrotum</h3>
+<span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">High Delicacy</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="22000" data-tech="Cera" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wax</div>
+<div class="font-label-md text-label-md text-gold-light mt-0.5">$22.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="22000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Mach.</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$22.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="22000" data-tech="Presto" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Razor</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$22.000</div>
+</button>
+</div>
+<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
+<!-- Glúteos -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="gluteos" data-zone-name="Glúteos">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Glutes</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Posterior Zone</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="22000" data-tech="Cera" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wax</div>
+<div class="font-label-md text-label-md text-gold-light mt-0.5">$22.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="11000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Mach.</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$11.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="15000" data-tech="Presto" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Razor</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$15.000</div>
+</button>
+</div>
+<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
+<!-- Perianal / Intergluteal Zone -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="perianal" data-zone-name="Perianal / Intergluteal Zone">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Perianal Zone</h3>
+<span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Intergluteal</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="18000" data-tech="Cera" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wax</div>
+<div class="font-label-md text-label-md text-gold-light mt-0.5">$18.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="18000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Mach.</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$18.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="18000" data-tech="Presto" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Razor</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$18.000</div>
+</button>
+</div>
+<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
+<!-- Manos -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="manos" data-zone-name="Manos">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Hands</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Back and fingers</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="10000" data-tech="Cera" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wax</div>
+<div class="font-label-md text-label-md text-gold-light mt-0.5">$10.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="5000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Mach.</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$5.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="10000" data-tech="Presto" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Razor</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$10.000</div>
+</button>
+</div>
+<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
+<!-- Pies -->
+<div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="pies" data-zone-name="Pies">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Feet</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Instep and toes</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="10000" data-tech="Cera" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Wax</div>
+<div class="font-label-md text-label-md text-gold-light mt-0.5">$10.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="5000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Mach.</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$5.000</div>
+</button>
+<button class="tech-chip p-2 rounded bg-surface-overlay text-center" data-base-price="10000" data-tech="Presto" type="button">
+<div class="font-label-sm text-label-sm text-on-surface-variant">Razor</div>
+<div class="font-label-md text-label-md text-on-surface mt-0.5">$10.000</div>
+</button>
+</div>
+<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
+</div>
+</div>
+<!-- SECTION 3: COMPLEMENTO DE BIENESTAR relajante -->
+<div class="space-y-space-md">
+<div class="flex items-center gap-space-sm pb-space-xs">
+<span class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary font-headline-sm text-headline-sm">3</span>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-ivory-white">Wellness Complement</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Body therapy with warm botanicals for muscle recovery and post-session relaxation.</p>
+</div>
+</div>
+<label class="group relative flex items-start gap-space-md p-space-lg rounded-xl bg-surface-card hover:bg-surface-container cursor-pointer transition-all">
+<input class="mt-1 h-5 w-5 rounded bg-surface-base accent-primary cursor-pointer" id="massage-toggle" type="checkbox"/>
+<div class="flex-1">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-ivory-white group-hover:text-gold-light transition-colors">
+                  Comprehensive Relaxing Massage (60 Min)
+                </span>
+<span class="font-headline-md text-headline-md text-primary">$80.000 COP</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+                60-minute session with warm essential oils of rosemary, eucalyptus, and cedar. Relieves muscle tension, calms the peripheral nervous system, and restores skin elasticity.
+              </p>
+</div>
+</label>
+</div>
+<!-- Visual Waxing Studio Atmosphere Asset -->
+<div class="relative overflow-hidden rounded-xl bg-surface-card p-space-lg shadow-xl">
+<div class="flex flex-col sm:flex-row items-center gap-space-lg">
+<div class="w-full sm:w-44 h-32 rounded-lg overflow-hidden shrink-0">
+<div class="bg-cover bg-center w-full h-full" data-alt="Dark luxury male grooming waxing studio suite with warm ambient candlelight, rich dark charcoal wood textures, brass golden accents and folded plush black towels." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_zUWs80JhQf1xF8NrvNcl2VrPoOCNDkhfjN3QaCdG4TyyQuEmn5K193jVQsTnInJDMl_fYkcIPdvJWVVnIXdGrOS2nhzPLDHTNYyuq453OcZ7ceQ7M2amQN9xDNjo3U2U4eZZqrjCbZ9CwcCCfdtFZgo2co_SsxV2xbsHqWkgpFna8ZOqIBJbPQVNIKFFpRH5EbD4kqJ2Crvz-vl463BOzK3CnqJ0E0J00rshNOwRwJXf9S3UKwqk')"></div>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs text-gold-muted font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                Impeccable Hygiene Standards
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Each procedure is performed with individual sterilized instruments, single-use disposable waxes with no recycling, disinfected thermal towels, and a private soundproof cabin in Marsella, Bogotá.
+              </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sticky Administrative Summary Panel (5 Cols / 4 Cols on Desktop) -->
+<div class="lg:col-span-5 xl:col-span-4 sticky top-24 space-y-space-md">
+<div class="rounded-xl bg-surface-card p-space-lg shadow-2xl space-y-space-md">
+<!-- Header Status Badge -->
+<div class="flex items-center justify-between pb-space-sm border-b border-white/5">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-emerald-accent/50 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">admin_panel_settings</span>
+<span>Admin View</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="items-count-badge">0 active zones</span>
+</div>
+<!-- Total Display -->
+<div class="space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Estimated Investment</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-2xl text-headline-2xl text-primary font-bold tracking-tight" id="total-price-display">$0</span>
+<span class="font-label-md text-label-md text-gold-muted uppercase">COP</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">
+              * The custom value entered in any zone automatically replaces the standard value for that zone.
+            </p>
+</div>
+<!-- Dynamic Breakdown List -->
+<div class="space-y-space-xs pt-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-gold-light">Selected Zones Details</span>
+<div class="max-h-56 overflow-y-auto space-y-2 pr-1" id="selected-zones-list">
+<div class="text-on-surface-variant font-body-sm text-body-sm italic py-space-sm text-center bg-surface-base rounded-lg">
+                No zone or technique selected yet.
+              </div>
+</div>
+</div>
+<!-- Internal Client Note Input -->
+<div class="space-y-1 pt-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="client-name-input">Client Name / Internal Note</label>
+<input class="w-full bg-surface-base px-space-sm py-2 text-ivory-white font-label-sm text-label-sm rounded-lg focus:outline-none focus:bg-surface-container placeholder:text-outline" id="client-name-input" placeholder="Ex: Santiago Moreno (Friday 4 PM)" type="text"/>
+</div>
+<!-- Formatted WhatsApp Message Preview -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">WhatsApp Message Preview</span>
+<button class="text-gold-light hover:text-ivory-white font-label-sm text-label-sm inline-flex items-center gap-1 transition-colors" id="btn-copy-summary" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+                Copiar
+              </button>
+</div>
+<textarea class="w-full bg-surface-base p-space-sm text-on-surface-variant font-mono text-[12px] leading-relaxed rounded-lg resize-none focus:outline-none select-all" id="whatsapp-preview-text" readonly="" rows="5"></textarea>
+</div>
+<!-- Primary and Secondary Action Triggers -->
+<div class="space-y-space-sm pt-space-xs">
+<a class="w-full inline-flex items-center justify-center gap-space-sm py-space-md px-space-lg rounded-lg bg-emerald-light hover:bg-emerald-accent text-ivory-white font-label-lg text-label-lg font-semibold transition-all shadow-lg hover:shadow-emerald-light/20" href="https://api.whatsapp.com/send/?phone=573138934136&text=Hola%2C+estoy+interesado+en+los+servicios+vistos+en+la+web&type=phone_number&app_absent=0" id="btn-whatsapp-send" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+              Send Quotation to WhatsApp (+57 313 893 4136)
+            </a>
+<button class="w-full inline-flex items-center justify-center gap-space-xs py-space-sm px-space-md rounded-lg bg-surface-overlay hover:bg-surface-container text-gold-light font-label-md text-label-md transition-colors" id="btn-copy-clipboard" type="button">
+<span class="material-symbols-outlined text-[18px]">copy_all</span>
+              Copy Breakdown for Client
+            </button>
+</div>
+<div class="hidden text-center text-secondary font-label-sm text-label-sm py-1 bg-emerald-accent/20 rounded" id="copy-toast">
+            ✓ Text copied to clipboard successfully
+          </div>
+<!-- Confidentiality Micro-Note -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm pt-space-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Confidential
+            </span>
+<span>Marsella, Bogotá D.C.</span>
+</div>
+</div>
+<!-- Quick Tips Card -->
+<div class="p-space-md rounded-xl bg-surface-overlay space-y-space-xs">
+<div class="flex items-center gap-space-xs text-gold-muted font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">info</span>
+            Quick Adjustment Guide
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Use the <em>"$ Other Value"</em> field to adjust volume discounts, courtesies, or set combined prices when the client requests 3 or more combined intimate zones.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Administrative Interactive Logic -->
+<script>
+    (function() {
+      // Zone State Store
+      const state = {
+        zones: {},
+        massage: false,
+        clientNote: ''
+      };
+
+      const formatCOP = (num) => '$' + Number(num).toLocaleString('es-CO');
+
+      // Initialize all zone cards in state
+      document.querySelectorAll('.zone-card').forEach(card => {
+        const id = card.getAttribute('data-zone-id');
+        const name = card.getAttribute('data-zone-name');
+        
+        // Find default variant if exists
+        const activeVariant = card.querySelector('.variant-btn.bg-emerald-accent')?.getAttribute('data-variant') || null;
+
+        state.zones[id] = {
+          name: name,
+          variant: activeVariant,
+          technique: null,
+          basePrice: 0,
+          customPrice: null,
+          active: false
+        };
+
+        // Wire variant selectors
+        card.querySelectorAll('.variant-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            card.querySelectorAll('.variant-btn').forEach(b => {
+              b.classList.remove('bg-emerald-accent', 'text-secondary');
+              b.classList.add('text-on-surface-variant');
+            });
+            btn.classList.add('bg-emerald-accent', 'text-secondary');
+            btn.classList.remove('text-on-surface-variant');
+            state.zones[id].variant = btn.getAttribute('data-variant');
+            updateQuotation();
+          });
+        });
+
+        // Wire technique buttons
+        card.querySelectorAll('.tech-chip').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const tech = btn.getAttribute('data-tech');
+            const price = parseInt(btn.getAttribute('data-base-price'), 10);
+
+            // Toggle technique selection
+            if (state.zones[id].technique === tech) {
+              state.zones[id].technique = null;
+              state.zones[id].basePrice = 0;
+              state.zones[id].active = !!state.zones[id].customPrice;
+              btn.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+              btn.classList.add('bg-surface-overlay');
+            } else {
+              card.querySelectorAll('.tech-chip').forEach(b => {
+                b.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+                b.classList.add('bg-surface-overlay');
+              });
+              btn.classList.remove('bg-surface-overlay');
+              btn.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+              state.zones[id].technique = tech;
+              state.zones[id].basePrice = price;
+              state.zones[id].active = true;
+            }
+            updateQuotation();
+          });
+        });
+
+        // Wire custom input field
+        const customInput = card.querySelector('.custom-price-input');
+        if (customInput) {
+          customInput.addEventListener('input', (e) => {
+            const val = e.target.value.trim();
+            if (val !== '' && !isNaN(val) && Number(val) >= 0) {
+              state.zones[id].customPrice = Number(val);
+              state.zones[id].active = true;
+            } else {
+              state.zones[id].customPrice = null;
+              state.zones[id].active = !!state.zones[id].technique;
+            }
+            updateQuotation();
+          });
+        }
+      });
+
+      // Massage toggle
+      const massageToggle = document.getElementById('massage-toggle');
+      if (massageToggle) {
+        massageToggle.addEventListener('change', (e) => {
+          state.massage = e.target.checked;
+          updateQuotation();
+        });
+      }
+
+      // Client note input
+      const clientNameInput = document.getElementById('client-name-input');
+      if (clientNameInput) {
+        clientNameInput.addEventListener('input', (e) => {
+          state.clientNote = e.target.value.trim();
+          updatePreviewText();
+        });
+      }
+
+      // Reset form
+      const btnReset = document.getElementById('btn-reset-all');
+      if (btnReset) {
+        btnReset.addEventListener('click', () => {
+          document.querySelectorAll('.tech-chip').forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+            b.classList.add('bg-surface-overlay');
+          });
+          document.querySelectorAll('.custom-price-input').forEach(i => i.value = '');
+          if (massageToggle) massageToggle.checked = false;
+          if (clientNameInput) clientNameInput.value = '';
+          
+          Object.keys(state.zones).forEach(id => {
+            state.zones[id].technique = null;
+            state.zones[id].basePrice = 0;
+            state.zones[id].customPrice = null;
+            state.zones[id].active = false;
+          });
+          state.massage = false;
+          state.clientNote = '';
+          updateQuotation();
+        });
+      }
+
+      function updateQuotation() {
+        let total = 0;
+        let activeCount = 0;
+        const selectedListEl = document.getElementById('selected-zones-list');
+        const activeItemsHtml = [];
+
+        // Evaluate Zones
+        Object.entries(state.zones).forEach(([id, item]) => {
+          if (item.active) {
+            activeCount++;
+            const finalPrice = item.customPrice !== null ? item.customPrice : item.basePrice;
+            total += finalPrice;
+
+            const variantText = item.variant ? ` (${item.variant})` : '';
+            const techText = item.technique ? item.technique : 'Custom';
+            const isCustom = item.customPrice !== null;
+
+            activeItemsHtml.push(`
+              <div class="flex items-center justify-between text-label-sm p-2 rounded bg-surface-base border-l-2 ${isCustom ? 'border-primary' : 'border-secondary'}">
+                <div class="flex flex-col">
+                  <span class="text-ivory-white font-medium">${item.name}${variantText}</span>
+                  <span class="text-on-surface-variant text-[11px]">${techText} ${isCustom ? '• Tarifa manual' : ''}</span>
+                </div>
+                <span class="font-semibold ${isCustom ? 'text-primary' : 'text-gold-light'}">${formatCOP(finalPrice)}</span>
+              </div>
+            `);
+          }
+        });
+
+        // Evaluate Massage
+        if (state.massage) {
+          activeCount++;
+          total += 80000;
+          activeItemsHtml.push(`
+            <div class="flex items-center justify-between text-label-sm p-2 rounded bg-surface-base border-l-2 border-primary">
+              <div class="flex flex-col">
+                <span class="text-ivory-white font-medium">Comprehensive Relaxing Massage (60 Min)</span>
+                <span class="text-on-surface-variant text-[11px]">Óleos botánicos tibios</span>
+              </div>
+              <span class="font-semibold text-primary">$80.000</span>
+            </div>
+          `);
+        }
+
+        // Render in UI
+        const totalPriceDisplay = document.getElementById('total-price-display');
+        const itemsCountBadge = document.getElementById('items-count-badge');
+        
+        if (totalPriceDisplay) totalPriceDisplay.textContent = formatCOP(total);
+        if (itemsCountBadge) itemsCountBadge.textContent = `${activeCount} ${activeCount === 1 ? 'active zone' : 'active zones'}`;
+
+        if (selectedListEl) {
+          if (activeItemsHtml.length > 0) {
+            selectedListEl.innerHTML = activeItemsHtml.join('');
+          } else {
+            selectedListEl.innerHTML = `
+              <div class="text-on-surface-variant font-body-sm text-body-sm italic py-space-sm text-center bg-surface-base rounded-lg">
+                No zone or technique selected yet.
+              </div>
+            `;
+          }
+        }
+
+        updatePreviewText(total);
+      }
+
+      function generateFormattedSummary(calculatedTotal) {
+        let total = calculatedTotal !== undefined ? calculatedTotal : 0;
+        if (calculatedTotal === undefined) {
+          Object.values(state.zones).forEach(z => {
+            if (z.active) total += (z.customPrice !== null ? z.customPrice : z.basePrice);
+          });
+          if (state.massage) total += 80000;
+        }
+
+        let lines = [];
+        lines.push('🏛️ *DEPILAMACHOS LUXURY WELLNESS*');
+        lines.push('📍 *Sede Marsella, Bogotá D.C.*');
+        lines.push('──────────────────────');
+        if (state.clientNote) {
+          lines.push(`👤 *Cliente/Orden:* ${state.clientNote}`);
+          lines.push('──────────────────────');
+        }
+        lines.push('📋 *SCHEDULED SESSION BREAKDOWN:*');
+
+        let hasItems = false;
+        Object.values(state.zones).forEach(z => {
+          if (z.active) {
+            hasItems = true;
+            const price = z.customPrice !== null ? z.customPrice : z.basePrice;
+            const variantTxt = z.variant ? ` (${z.variant})` : '';
+            const techTxt = z.technique ? z.technique : 'Custom';
+            lines.push(`• *${z.name}${variantTxt}*: [${techTxt}] -> ${formatCOP(price)}`);
+          }
+        });
+
+        if (state.massage) {
+          hasItems = true;
+          lines.push('• *Comprehensive Relaxing Massage (60 Min)*: -> $80.000');
+        }
+
+        if (!hasItems) {
+          lines.push('• (No zones selected)');
+        }
+
+        lines.push('──────────────────────');
+        lines.push(`💰 *TOTAL ESTIMADO:* ${formatCOP(total)} COP`);
+        lines.push('──────────────────────');
+        lines.push('🛡️ *Service Conditions:*');
+        lines.push('• 100% private attention in individual room by appointment.');
+        lines.push('• Sterile and single-use disposable material.');
+        lines.push('• Location: Marsella, Bogotá. WhatsApp Reservations: +57 313 893 4136');
+
+        return lines.join('\n');
+      }
+
+      function updatePreviewText(currentTotal) {
+        const preview = document.getElementById('whatsapp-preview-text');
+        const waLink = document.getElementById('btn-whatsapp-send');
+        const text = generateFormattedSummary(currentTotal);
+        
+        if (preview) preview.value = text;
+        if (waLink) {
+          const encoded = encodeURIComponent(text);
+          waLink.href = `https://wa.me/573138934136?text=${encoded}`;
+        }
+      }
+
+      // Copy helpers
+      function showCopyToast() {
+        const toast = document.getElementById('copy-toast');
+        if (toast) {
+          toast.classList.remove('hidden');
+          setTimeout(() => {
+            toast.classList.add('hidden');
+          }, 2400);
+        }
+      }
+
+      function copyTextToClipboard(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(showCopyToast);
+        } else {
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          textarea.style.position = 'fixed';
+          textarea.style.left = '-999999px';
+          document.body.appendChild(textarea);
+          textarea.select();
+          try {
+            document.execCommand('copy');
+            showCopyToast();
+          } catch (err) {
+            console.error('Failed to copy', err);
+          }
+          document.body.removeChild(textarea);
+        }
+      }
+
+      const btnCopySummary = document.getElementById('btn-copy-summary');
+      if (btnCopySummary) {
+        btnCopySummary.addEventListener('click', () => {
+          const text = document.getElementById('whatsapp-preview-text')?.value || '';
+          copyTextToClipboard(text);
+        });
+      }
+
+      const btnCopyClipboard = document.getElementById('btn-copy-clipboard');
+      if (btnCopyClipboard) {
+        btnCopyClipboard.addEventListener('click', () => {
+          const text = document.getElementById('whatsapp-preview-text')?.value || '';
+          copyTextToClipboard(text);
+        });
+      }
+
+      // Initial run
+      updateQuotation();
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-space-xl pb-space-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl"><div class="space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="Logo DepilaMachos" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UJhzTLwJ634-E0KVv2zzx1P9-xjRXf8q27iJlV4h0JaxZkBDt128SlF7TPbP-V9hOURmkjL1o6XLRjN2i1EDTufpdreGUXjEXQxOi6UsVExhkvpUVW9Hy9QW5Qd8_nygXnI1ZF2f9m2zztATWHO_n8szi4QPqH3tG6L9kCn472IFSn4U9ba3QZfY8JFKYH477BX-0Hkj5WdhDnTw2AT19kSD6vg8aBsxSqeswQrZ_hug0ZRmYJjPhOjA"/><span class="font-headline-sm text-headline-sm text-ivory-white uppercase">DepilaMachos</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">estudio exclusivo de depilación masculina y bienestar relajante. Discreción, maestría y confort absoluto en Marsella, Bogotá.</p><div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-emerald-accent/60 text-secondary"><span class="material-symbols-outlined text-[16px]">lock</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Privacidad 100% Garantizada</span></div></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">estudio Bogotá</h3><div class="flex items-start gap-space-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[20px]">location_on</span><div class="font-body-sm text-body-sm"><p class="text-ivory-white font-label-md text-label-md">Sede Marsella</p><p class="">Barrio Marsella, Bogotá D.C., Colombia</p><p class="text-outline font-label-sm text-label-sm mt-space-xs">Atención con cita previa</p></div></div><div class="flex items-center gap-space-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[20px]">schedule</span><span class="font-body-sm text-body-sm">Lun - Sáb: 10:00 AM - 6:00 PM</span></div></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Contacto Directo</h3><a class="flex items-center gap-space-sm text-on-surface-variant hover:text-primary transition-colors" href="https://api.whatsapp.com/send/?phone=573138934136&text=Hola%2C+estoy+interesado+en+los+servicios+vistos+en+la+web&type=phone_number&app_absent=0" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-primary text-[20px]">chat</span><span class="font-body-sm text-body-sm">WhatsApp: +57 313 893 4136</span></a><div class="pt-space-xs"><a class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-card hover:bg-surface-container text-ivory-white font-label-md text-label-md transition-colors" href="https://api.whatsapp.com/send/?phone=573138934136&text=Hola%2C+estoy+interesado+en+los+servicios+vistos+en+la+web&type=phone_number&app_absent=0" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-primary text-[18px]">calendar_month</span><span class="">Reservar por Chat</span></a></div></div><div class="space-y-space-sm"><h3 class="font-label-lg text-label-lg uppercase tracking-wider text-primary">Enlaces and Confianza</h3><ul class="space-y-space-xs"><li class="font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="servicios" href="index.html#servicios">Menú de Tratamientos</a></li><li class="font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="calculadora-y-precios" href="calculadora-cliente.html">Calculadora de Paquetes</a></li><li class="font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="condiciones" href="condiciones.html">Protocolo de Higiene and Citas</a></li><li class="font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="ubicacion" href="index.html#ubicacion">Cómo Llegar</a></li></ul><div class="flex items-center gap-space-sm pt-space-xs">
+          <a class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" href="https://www.facebook.com/depilamachos" target="_blank" rel="noopener noreferrer">
+            <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+          </a>
+          <a class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors" href="https://www.instagram.com/depilamachos" target="_blank" rel="noopener noreferrer">
+            <svg fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" /></svg>
+          </a>
+        </div></div></div><div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm"><p class="">© 2026 DepilaMachos. Todos los derechos reservados. estudio Masculino de Grooming and Bienestar.</p><div class="flex items-center gap-space-md"><span class="text-outline">Marsella, Bogotá</span><span class="">•</span><span class="text-outline">Atención Confidential</span></div></div></div></footer>
+</body></html>

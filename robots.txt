@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /preciosadmin.html
+Disallow: /en/preciosadmin.html
+
+Sitemap: https://depilamachos.com.co/sitemap.xml
