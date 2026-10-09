@@ -985,50 +985,62 @@ Clear selection
 
     function generateMessage(groups, hasMasaje, total) {
       let lines = [];
-      lines.push('Hello DepilaMachos Bogota, I wish to book my appointment according to the following quote:');
-      lines.push('');
-
       let hasAny = false;
+      lines.push('*Zonas a depilar*');
+      lines.push('──────────────────────');
 
       if (groups.cera.length > 0) {
         hasAny = true;
-        lines.push('• WARM WAX TECHNIQUE:');
+        lines.push('*Cera*');
         groups.cera.forEach(it => {
-          lines.push(`  - ${it.name} (${formatCOP(it.price)})`);
+          lines.push(`• *${it.name}*: ${formatCOP(it.price)}`);
         });
         lines.push('');
       }
 
       if (groups.maquina.length > 0) {
         hasAny = true;
-        lines.push('• ELECTRIC TRIMMER / CLOSE SHAVE:');
+        lines.push('*Máquina eléctrica*');
         groups.maquina.forEach(it => {
-          lines.push(`  - ${it.name} (${formatCOP(it.price)})`);
+          lines.push(`• *${it.name}*: ${formatCOP(it.price)}`);
         });
         lines.push('');
       }
 
       if (groups.presto.length > 0) {
         hasAny = true;
-        lines.push('• RAZOR SHAVE:');
+        lines.push('*Prestobarba*');
         groups.presto.forEach(it => {
-          lines.push(`  - ${it.name} (${formatCOP(it.price)})`);
+          lines.push(`• *${it.name}*: ${formatCOP(it.price)}`);
         });
         lines.push('');
       }
 
       if (hasMasaje) {
         hasAny = true;
-        lines.push('• WELLNESS ADD-ON:');
-        lines.push('  - Full Body Relaxing Massage 60 Min ($80.000)');
+        lines.push('• *Masaje Relajante*:  $80.000');
         lines.push('');
       }
 
       if (!hasAny) {
-        rawMessageTextarea.value = 'Hello DepilaMachos, I would like to receive advice about your men's waxing services in Bogota.';
+        rawMessageTextarea.value = 'Hola DepilaMachos, me gustaría recibir asesoría sobre sus servicios de depilación masculina en Bogotá.';
         btnWhatsapp.href = 'https://wa.me/573138934136?text=' + encodeURIComponent(rawMessageTextarea.value);
         return;
       }
+      
+      if (lines[lines.length - 1] === '') {
+        lines.pop();
+      }
+
+      lines.push('──────────────────────');
+      lines.push(`💰 *TOTAL ESTIMADO:* ${formatCOP(total)} COP`);
+      lines.push('──────────────────────');
+
+      const fullMessage = lines.join('
+');
+      rawMessageTextarea.value = fullMessage;
+      btnWhatsapp.href = 'https://wa.me/573138934136?text=' + encodeURIComponent(fullMessage);
+    }
 
       lines.push(`ESTIMATED TOTAL: ${formatCOP(total)} COP`);
       lines.push('Location: Marsella, Bogota D.C.');

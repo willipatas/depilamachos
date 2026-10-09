@@ -432,9 +432,7 @@
 <!-- Visual Waxing Studio Atmosphere Asset -->
 <div class="relative overflow-hidden rounded-xl bg-surface-card p-space-lg shadow-xl">
 <div class="flex flex-col sm:flex-row items-center gap-space-lg">
-<div class="w-full sm:w-44 h-32 rounded-lg overflow-hidden shrink-0">
-<div class="bg-cover bg-center w-full h-full" data-alt="Dark luxury male grooming waxing studio suite with warm ambient candlelight, rich dark charcoal wood textures, brass golden accents and folded plush black towels." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_zUWs80JhQf1xF8NrvNcl2VrPoOCNDkhfjN3QaCdG4TyyQuEmn5K193jVQsTnInJDMl_fYkcIPdvJWVVnIXdGrOS2nhzPLDHTNYyuq453OcZ7ceQ7M2amQN9xDNjo3U2U4eZZqrjCbZ9CwcCCfdtFZgo2co_SsxV2xbsHqWkgpFna8ZOqIBJbPQVNIKFFpRH5EbD4kqJ2Crvz-vl463BOzK3CnqJ0E0J00rshNOwRwJXf9S3UKwqk')"></div>
-</div>
+
 <div class="space-y-space-xs">
 <div class="flex items-center gap-space-xs text-gold-muted font-label-sm text-label-sm uppercase tracking-wider">
 <span class="material-symbols-outlined text-[16px]">verified</span>
@@ -737,14 +735,20 @@
         }
 
         let lines = [];
-        lines.push('🏛️ *DEPILAMACHOS LUXURY WELLNESS*');
-        lines.push('📍 *Sede Marsella, Bogotá D.C.*');
-        lines.push('──────────────────────');
         if (state.clientNote) {
-          lines.push(`👤 *Cliente/Orden:* ${state.clientNote}`);
-          lines.push('──────────────────────');
+          lines.push(`*Cliente:* ${state.clientNote}`);
+          lines.push('');
         }
-        lines.push('📋 *SCHEDULED SESSION BREAKDOWN:*');
+        
+        lines.push('*Zonas a depilar*');
+        lines.push('──────────────────────');
+
+        const groups = {
+            'Cera': [],
+            'Máquina eléctrica': [],
+            'Prestobarba': [],
+            'Personalizado': []
+        };
 
         let hasItems = false;
         Object.values(state.zones).forEach(z => {
@@ -752,29 +756,52 @@
             hasItems = true;
             const price = z.customPrice !== null ? z.customPrice : z.basePrice;
             const variantTxt = z.variant ? ` (${z.variant})` : '';
-            const techTxt = z.technique ? z.technique : 'Custom';
-            lines.push(`• *${z.name}${variantTxt}*: [${techTxt}] -> ${formatCOP(price)}`);
+            let t = z.technique ? z.technique : 'Personalizado';
+            if (t === 'Máquina' || t === 'Máq.') t = 'Máquina eléctrica';
+            if (t === 'Presto') t = 'Prestobarba';
+            if (!groups[t]) groups[t] = [];
+            groups[t].push(`• *${z.name}${variantTxt}*: ${formatCOP(price)}`);
           }
+        });
+
+        const order = ['Cera', 'Máquina eléctrica', 'Prestobarba', 'Personalizado'];
+        order.forEach(tech => {
+            if (groups[tech] && groups[tech].length > 0) {
+                lines.push(`*${tech}*`);
+                groups[tech].forEach(item => lines.push(item));
+                lines.push('');
+            }
+        });
+        
+        Object.keys(groups).forEach(tech => {
+            if (!order.includes(tech) && groups[tech] && groups[tech].length > 0) {
+                lines.push(`*${tech}*`);
+                groups[tech].forEach(item => lines.push(item));
+                lines.push('');
+            }
         });
 
         if (state.massage) {
           hasItems = true;
-          lines.push('• *Comprehensive Relaxing Massage (60 Min)*: -> $80.000');
+          lines.push('• *Masaje Relajante*:  $80.000');
+          lines.push('');
         }
 
         if (!hasItems) {
-          lines.push('• (No zones selected)');
+          lines.push('• (Sin zonas seleccionadas)');
+          lines.push('');
+        }
+
+        if (lines[lines.length - 1] === '') {
+            lines.pop();
         }
 
         lines.push('──────────────────────');
         lines.push(`💰 *TOTAL ESTIMADO:* ${formatCOP(total)} COP`);
         lines.push('──────────────────────');
-        lines.push('🛡️ *Service Conditions:*');
-        lines.push('• 100% private attention in individual room by appointment.');
-        lines.push('• Sterile and single-use disposable material.');
-        lines.push('• Location: Marsella, Bogotá. WhatsApp Reservations: +57 313 893 4136');
 
-        return lines.join('\n');
+        return lines.join('
+');
       }
 
       function updatePreviewText(currentTotal) {
