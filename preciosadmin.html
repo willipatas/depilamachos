@@ -338,10 +338,9 @@
 <div class="zone-card p-space-md rounded-xl bg-surface-card flex flex-col justify-between" data-zone-id="perianal" data-zone-name="Zona Perianal / Interglútea">
 <div class="flex items-center justify-between mb-space-sm">
 <div class="flex items-center gap-1.5">
-<h3 class="font-headline-sm text-headline-sm text-ivory-white">Zona Perianal</h3>
+<h3 class="font-headline-sm text-headline-sm text-ivory-white">Zona Perianal / Interglútea</h3>
 <span class="material-symbols-outlined text-primary text-[16px]">lock</span>
 </div>
-<span class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Interglútea</span>
 </div>
 <div class="grid grid-cols-3 gap-space-xs mb-space-xs">
 <button class="tech-chip group p-2 rounded bg-surface-overlay text-center" data-base-price="18000" data-tech="Cera" type="button">
@@ -419,7 +418,7 @@
 <div class="flex-1">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
 <span class="font-headline-sm text-headline-sm text-ivory-white group-hover:text-gold-light transition-colors">
-                  Masaje Relajante Integral (60 Min)
+                  Masaje Relajante
                 </span>
 <span class="font-headline-md text-headline-md text-primary">$80.000 COP</span>
 </div>
@@ -672,7 +671,7 @@
             const finalPrice = item.customPrice !== null ? item.customPrice : item.basePrice;
             total += finalPrice;
 
-            const variantText = item.variant ? ` (${item.variant})` : '';
+            const variantText = (item.variant && !['Completa', 'Completos', 'Completas', 'Full'].includes(item.variant)) ? ` (${item.variant})` : '';
             const techText = item.technique ? item.technique : 'Personalizado';
             const isCustom = item.customPrice !== null;
 
@@ -695,7 +694,7 @@
           activeItemsHtml.push(`
             <div class="flex items-center justify-between text-label-sm p-2 rounded bg-surface-base border-l-2 border-primary">
               <div class="flex flex-col">
-                <span class="text-ivory-white font-medium">Masaje Relajante Integral (60 Min)</span>
+                <span class="text-ivory-white font-medium">Masaje Relajante</span>
                 <span class="text-on-surface-variant text-[11px]">Óleos botánicos tibios</span>
               </div>
               <span class="font-semibold text-primary">$80.000</span>
@@ -755,7 +754,7 @@
           if (z.active) {
             hasItems = true;
             const price = z.customPrice !== null ? z.customPrice : z.basePrice;
-            const variantTxt = z.variant ? ` (${z.variant})` : '';
+            const variantTxt = (z.variant && !['Completa', 'Completos', 'Completas', 'Full'].includes(z.variant)) ? ` (${z.variant})` : '';
             let t = z.technique ? z.technique : 'Personalizado';
             if (t === 'Máquina' || t === 'Máq.') t = 'Máquina eléctrica';
             if (t === 'Presto') t = 'Prestobarba';
