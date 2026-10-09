@@ -672,7 +672,7 @@
             const finalPrice = item.customPrice !== null ? item.customPrice : item.basePrice;
             total += finalPrice;
 
-            const variantText = (item.variant && !['Completa', 'Completos', 'Completas', 'Full'].includes(item.variant)) ? ` (${item.variant})` : '';
+            const variantText = item.variant ? ` (${item.variant})` : '';
             const techText = item.technique ? item.technique : 'Custom';
             const isCustom = item.customPrice !== null;
 
@@ -755,7 +755,7 @@
           if (z.active) {
             hasItems = true;
             const price = z.customPrice !== null ? z.customPrice : z.basePrice;
-            const variantTxt = (z.variant && !['Completa', 'Completos', 'Completas', 'Full'].includes(z.variant)) ? ` (${z.variant})` : '';
+            const variantTxt = z.variant ? ` (${z.variant})` : '';
             let t = z.technique ? z.technique : 'Personalizado';
             if (t === 'Máquina' || t === 'Máq.') t = 'Máquina eléctrica';
             if (t === 'Presto') t = 'Prestobarba';
