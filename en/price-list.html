@@ -1043,15 +1043,6 @@ Clear selection
       btnWhatsapp.href = 'https://wa.me/573138934136?text=' + encodeURIComponent(fullMessage);
     }
 
-      lines.push(`ESTIMATED TOTAL: ${formatCOP(total)} COP`);
-      lines.push('Location: Marsella, Bogota D.C.');
-      lines.push('What times do you have available?');
-
-      const fullMessage = lines.join('\n');
-      rawMessageTextarea.value = fullMessage;
-      btnWhatsapp.href = 'https://wa.me/573138934136?text=' + encodeURIComponent(fullMessage);
-    }
-
     // Initial run
     updateDynamicCardsDisplay();
     recalculate();
