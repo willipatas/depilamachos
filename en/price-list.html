@@ -1038,8 +1038,7 @@ Clear selection
       lines.push(`💰 *TOTAL ESTIMADO:* ${formatCOP(total)} COP`);
       lines.push('──────────────────────');
 
-      const fullMessage = lines.join('
-');
+      const fullMessage = lines.join('\n');
       rawMessageTextarea.value = fullMessage;
       btnWhatsapp.href = 'https://wa.me/573138934136?text=' + encodeURIComponent(fullMessage);
     }
