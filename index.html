@@ -609,8 +609,8 @@
 </div>
 </div>
 <!-- Stylized Dark Map Component -->
-<div class="lg:col-span-6 relative">
-<div class="w-full h-96 rounded-xl overflow-hidden shadow-2xl relative bg-surface-card">
+<div class="lg:col-span-6 relative group">
+<a href="https://maps.app.goo.gl/CdFYkpgoT9hFDUYv6?g_st=ac" target="_blank" rel="noopener noreferrer" class="block w-full h-96 rounded-xl overflow-hidden shadow-2xl relative bg-surface-card transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(212,175,55,0.2)]">
 <!-- Google Static Map integration via data-location -->
 <div class="w-full h-full bg-cover bg-center" data-location="Barrio Marsella, Bogota, Colombia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIuBVfnUy_8h6aXGlAMNyiIOprwWO3FaHWAYdlLggLJPZzT-Kkpnr8L9V8Od2JtYSajsWt0lBtAjGPYCaZAdBgL9PkRNz9giAyX2YXAK8cZLNK_h3zleukQieVngAFQhUu28BqRFTrzvahmxfEwSnCYHLpF3gdW2vB15KHJpkNJEOq8tE3K8lk8kP5maKkcrHWTIXA6DRKfQLLOiyctP20sbF2aX0uY0XsMS9xRcOBxCA2S-x6wUWq')"></div>
 <!-- Overlay Mask for Dark Aesthetic -->
@@ -629,6 +629,14 @@
 <span class="material-symbols-outlined text-[16px]">navigation</span>
 <span class="">Cerca a vías principales y TransMilenio</span>
 </div>
+<!-- Hover CTA -->
+<div class="absolute inset-0 bg-surface-base/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none backdrop-blur-[2px]">
+<span class="inline-flex items-center gap-2 px-space-lg py-space-sm rounded-full bg-primary text-on-primary font-label-md shadow-xl translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+<span class="material-symbols-outlined text-[20px]">open_in_new</span>
+Abrir en Google Maps
+</span>
+</div>
+</a>
 </div>
 </div>
 </div>
