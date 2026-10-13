@@ -81,9 +81,9 @@
   </div>
 </div>
 <main class="w-full pt-20 bg-surface-base min-h-screen"><div class="flex flex-col w-full">
-<div class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl">
+<div class="w-full max-w-7xl mx-auto px-margin-mobile lg:px-margin py-6 sm:py-space-xl">
 <!-- Top Administrative Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-xl pb-space-lg border-b border-white/5">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-3 mb-4 pb-3 sm:gap-space-lg sm:mb-space-xl sm:pb-space-lg border-b border-white/5">
 <div class="space-y-space-sm max-w-3xl">
 <div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-gold-light text-label-sm font-label-sm uppercase tracking-wider">
 <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
@@ -97,7 +97,7 @@
         </p>
 </div>
 <div class="flex items-center gap-space-sm">
-<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-card hover:bg-surface-container text-on-surface hover:text-ivory-white font-label-md text-label-md transition-colors shadow-sm" id="btn-reset-all" type="button">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-[#1A1D26] hover:bg-[#20242e] border border-white/10 text-on-surface hover:text-ivory-white font-label-md text-label-md transition-colors shadow-sm" id="btn-reset-all" type="button">
 <span class="material-symbols-outlined text-[18px]">restart_alt</span>
           Reset Form
         </button>
@@ -125,65 +125,74 @@
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="espalda" data-zone-name="Back">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-space-sm gap-2">
 <h3 class="font-headline-sm text-headline-sm text-ivory-white">Back</h3>
-<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-lg"><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all bg-emerald-accent text-secondary" data-variant="Full" type="button">Full</button><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Upper" type="button">Upper</button><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Lower" type="button">Lower</button></div>
+<div class="flex items-center gap-space-xs bg-[#111317] border border-white/5 p-0.5 sm:p-1 rounded-lg"><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all bg-emerald-accent text-secondary" data-variant="Full" type="button">Full</button><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Upper" type="button">Upper</button><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Lower" type="button">Lower</button></div>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="46000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$46.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="46000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$46.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="23000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Trimmer</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$23.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="23000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Trimmer</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$23.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="33000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$33.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="33000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$33.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Custom Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="brazos" data-zone-name="Arms and Extremities">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-space-sm gap-2">
 <h3 class="font-headline-sm text-headline-sm text-ivory-white">Arms and Extremities</h3>
-<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-lg"><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all bg-emerald-accent text-secondary" data-variant="Full" type="button">Full</button><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Half Arm" type="button">Half Arm</button></div>
+<div class="flex items-center gap-space-xs bg-[#111317] border border-white/5 p-0.5 sm:p-1 rounded-lg"><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all bg-emerald-accent text-secondary" data-variant="Full" type="button">Full</button><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Half Arm" type="button">Half Arm</button></div>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="60000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$60.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="60000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$60.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="30000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Trimmer</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$30.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="30000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Trimmer</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$30.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="42000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$42.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="42000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$42.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Custom Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="piernas" data-zone-name="Legs and Thighs">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-space-sm gap-2">
 <h3 class="font-headline-sm text-headline-sm text-ivory-white">Legs and Thighs</h3>
-<div class="flex items-center gap-space-xs bg-surface-container p-1 rounded-lg"><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all bg-emerald-accent text-secondary" data-variant="Full" type="button">Full</button><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Half Leg" type="button">Half Leg</button></div>
+<div class="flex items-center gap-space-xs bg-[#111317] border border-white/5 p-0.5 sm:p-1 rounded-lg"><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all bg-emerald-accent text-secondary" data-variant="Full" type="button">Full</button><button class="variant-btn px-2 py-0.5 rounded font-label-sm text-label-sm transition-all text-on-surface-variant hover:text-ivory-white" data-variant="Half Leg" type="button">Half Leg</button></div>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="68000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$68.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="68000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$68.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="34000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Trimmer</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$34.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="34000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Trimmer</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$34.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="48000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$48.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="48000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$48.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Custom Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 </div>
 <!-- SECTION 2: ZONAS TORÁCICAS, CORPORALES and ÍNTIMAS -->
@@ -202,21 +211,24 @@
 <h3 class="font-headline-sm text-headline-sm text-ivory-white">Armpits</h3>
 <span class="font-label-sm text-label-sm text-secondary bg-secondary-container/40 px-2 py-0.5 rounded">Quick 15m</span>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="16000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="16000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="16000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="16000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="16000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="16000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <!-- Pecho -->
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="pecho" data-zone-name="Chest">
@@ -224,21 +236,24 @@
 <h3 class="font-headline-sm text-headline-sm text-ivory-white">Chest</h3>
 <span class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Pectorals</span>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="24000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$24.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="24000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$24.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="12000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$12.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="12000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$12.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="17000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$17.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="17000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$17.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <!-- Abdomen -->
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="abdomen" data-zone-name="Abdomen">
@@ -246,21 +261,24 @@
 <h3 class="font-headline-sm text-headline-sm text-ivory-white">Abdomen</h3>
 <span class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Linea alba and belly</span>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="28000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$28.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="28000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$28.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="14000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$14.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="14000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$14.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="20000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$20.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="20000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$20.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <!-- Pubis -->
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="pubis" data-zone-name="Pubis">
@@ -271,21 +289,24 @@
 </div>
 <span class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Intimate Zone</span>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="16000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="16000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="16000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="16000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="16000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="16000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$16.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <!-- Escroto -->
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="escroto" data-zone-name="Escroto">
@@ -296,21 +317,24 @@
 </div>
 <span class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">High Delicacy</span>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="22000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$22.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="22000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$22.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="22000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$22.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="22000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$22.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="22000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$22.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="22000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$22.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <!-- Glúteos -->
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="gluteos" data-zone-name="Glúteos">
@@ -318,21 +342,24 @@
 <h3 class="font-headline-sm text-headline-sm text-ivory-white">Glutes</h3>
 <span class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Posterior Zone</span>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="22000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$22.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="22000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$22.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="11000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$11.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="11000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$11.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="15000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$15.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="15000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$15.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <!-- Perianal / Intergluteal Zone -->
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="perianal" data-zone-name="Perianal / Intergluteal Zone">
@@ -343,21 +370,24 @@
 </div>
 <span class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Intergluteal</span>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="18000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$18.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="18000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$18.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="18000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$18.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="18000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$18.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="18000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$18.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="18000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$18.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <!-- Manos -->
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="manos" data-zone-name="Manos">
@@ -365,21 +395,24 @@
 <h3 class="font-headline-sm text-headline-sm text-ivory-white">Hands</h3>
 <span class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Back and fingers</span>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="10000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$10.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="10000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$10.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="5000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$5.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="5000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$5.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="10000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$10.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="10000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$10.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 <!-- Pies -->
 <div class="zone-card p-2.5 sm:p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] hover:border-primary/40 shadow-md shadow-black/40 flex flex-col justify-between transition-all duration-200" data-zone-id="pies" data-zone-name="Pies">
@@ -387,21 +420,24 @@
 <h3 class="font-headline-sm text-headline-sm text-ivory-white">Feet</h3>
 <span class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Instep and toes</span>
 </div>
-<div class="grid grid-cols-3 gap-space-xs mb-space-xs">
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="10000" data-tech="Cera" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
-<div class="font-label-md text-label-md text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$10.000</div>
+<div class="grid grid-cols-4 gap-1 sm:gap-1.5">
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="10000" data-tech="Cera" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Wax</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-gold-light group-[.bg-primary]:text-on-primary mt-0.5">$10.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="5000" data-tech="Máquina" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$5.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="5000" data-tech="Máquina" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Mach.</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$5.000</div>
 </button>
-<button class="tech-chip group p-1.5 sm:p-2 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all" data-base-price="10000" data-tech="Presto" type="button">
-<div class="font-label-sm text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
-<div class="font-label-md text-label-md text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$10.000</div>
+<button class="tech-chip group p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 text-center transition-all flex flex-col items-center justify-center" data-base-price="10000" data-tech="Presto" type="button">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant group-[.bg-primary]:text-on-primary">Razor</div>
+<div class="font-label-md text-[11px] sm:text-[13px] font-semibold text-on-surface group-[.bg-primary]:text-on-primary mt-0.5">$10.000</div>
 </button>
+<div class="relative flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-lg bg-[#111317] hover:bg-[#15171d] border border-white/5 hover:border-white/20 focus-within:border-primary/70 focus-within:bg-[#161922] transition-all text-center">
+<div class="font-label-sm text-[10px] sm:text-label-sm text-outline whitespace-nowrap">Admin</div>
+<input class="custom-price-input w-full bg-transparent p-0 text-ivory-white font-label-md text-[11px] sm:text-[13px] font-semibold text-center focus:outline-none placeholder:text-outline/40 mt-0.5" min="0" placeholder="$ Other" step="1000" type="number"/>
 </div>
-<input class="custom-price-input mt-2 w-full bg-surface-base px-space-sm py-1.5 text-ivory-white font-label-sm text-label-sm rounded focus:outline-none focus:bg-surface-overlay placeholder:text-outline text-right" min="0" placeholder="$ Other Value (Admin)" step="1000" type="number"/>
+</div>
 </div>
 </div>
 </div>
@@ -414,7 +450,7 @@
 <p class="font-body-sm text-body-sm text-on-surface-variant">Body therapy with warm botanicals for muscle recovery and post-session relaxation.</p>
 </div>
 </div>
-<label class="group relative flex items-start gap-space-md p-space-lg rounded-xl bg-surface-card hover:bg-surface-container cursor-pointer transition-all">
+<label class="group relative flex items-start gap-space-md p-3.5 sm:p-space-lg rounded-xl bg-[#1A1D26] border border-charcoal-border hover:border-primary/40 shadow-xl shadow-black/50 cursor-pointer transition-all">
 <input class="mt-1 h-5 w-5 rounded bg-surface-base accent-primary cursor-pointer" id="massage-toggle" type="checkbox"/>
 <div class="flex-1">
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
@@ -430,7 +466,7 @@
 </label>
 </div>
 <!-- Visual Waxing Studio Atmosphere Asset -->
-<div class="relative overflow-hidden rounded-xl bg-surface-card p-space-lg shadow-xl">
+<div class="relative overflow-hidden rounded-xl bg-[#1A1D26] border border-[#2D323E] p-space-md sm:p-space-lg shadow-xl">
 <div class="flex flex-col sm:flex-row items-center gap-space-lg">
 
 <div class="space-y-space-xs">
@@ -447,7 +483,7 @@
 </div>
 <!-- Right Column: Sticky Administrative Summary Panel (5 Cols / 4 Cols on Desktop) -->
 <div class="lg:col-span-5 xl:col-span-4 sticky top-24 space-y-space-md">
-<div class="rounded-xl bg-surface-card p-space-lg shadow-2xl space-y-space-md">
+<div class="rounded-2xl bg-[#1A1D26] border border-[#2D323E] p-3.5 sm:p-space-lg shadow-2xl space-y-3 sm:space-y-space-md">
 <!-- Header Status Badge -->
 <div class="flex items-center justify-between pb-space-sm border-b border-white/5">
 <div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-emerald-accent/50 text-secondary font-label-sm text-label-sm">
@@ -515,7 +551,7 @@
 </div>
 </div>
 <!-- Quick Tips Card -->
-<div class="p-space-md rounded-xl bg-surface-overlay space-y-space-xs">
+<div class="p-space-md rounded-xl bg-[#1A1D26] border border-[#2D323E] space-y-space-xs">
 <div class="flex items-center gap-space-xs text-gold-muted font-label-sm text-label-sm font-semibold">
 <span class="material-symbols-outlined text-[16px]">info</span>
             Quick Adjustment Guide
@@ -608,9 +644,11 @@
             if (val !== '' && !isNaN(val) && Number(val) >= 0) {
               state.zones[id].customPrice = Number(val);
               state.zones[id].active = true;
+              customInput.parentElement?.classList.add('border-primary/80', 'bg-primary/10');
             } else {
               state.zones[id].customPrice = null;
               state.zones[id].active = !!state.zones[id].technique;
+              customInput.parentElement?.classList.remove('border-primary/80', 'bg-primary/10');
             }
             updateQuotation();
           });
@@ -643,7 +681,10 @@
             b.classList.remove('bg-primary', 'text-on-primary', 'font-semibold');
             b.classList.add('bg-surface-overlay');
           });
-          document.querySelectorAll('.custom-price-input').forEach(i => i.value = '');
+          document.querySelectorAll('.custom-price-input').forEach(i => {
+            i.value = '';
+            i.parentElement?.classList.remove('border-primary/80', 'bg-primary/10');
+          });
           if (massageToggle) massageToggle.checked = false;
           if (clientNameInput) clientNameInput.value = '';
           
