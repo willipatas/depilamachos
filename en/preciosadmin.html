@@ -471,25 +471,25 @@ Clear selection
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-space-sm">
 <span class="material-symbols-outlined text-primary text-[20px]">shield</span>
-<span class="font-headline-sm text-headline-sm text-ivory-white">Zona Perianal / Interglútea</span>
+<span class="font-headline-sm text-headline-sm text-ivory-white">Perianal / Interglútea</span>
 </div>
 <span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-emerald-accent/60 text-secondary">Hygiene and Total Comfort</span>
 </div>
 <div class="grid grid-cols-4 gap-1 sm:gap-1.5 pt-0.5 sm:pt-1">
 <label class="tech-card relative py-1.5 px-0.5 sm:px-1 rounded-lg bg-[#131620] hover:bg-[#191D2A] border border-white/10 hover:border-white/20 cursor-pointer text-center block transition-all">
-<input class="peer sr-only" data-price="18000" data-zone="Zona Perianal / Interglútea" name="zona-perianal" type="radio" value="cera"/>
+<input class="peer sr-only" data-price="18000" data-zone="Perianal / Interglútea" name="zona-perianal" type="radio" value="cera"/>
 <div class="relative z-10 font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant peer-checked:text-on-primary">Wax</div>
 <div class="relative z-10 font-label-md text-[11px] sm:text-label-md text-primary peer-checked:text-on-primary">$18.000</div>
 <div class="absolute inset-0 rounded-lg pointer-events-none ring-1 ring-transparent peer-checked:ring-primary peer-checked:bg-primary"></div>
 </label>
 <label class="tech-card relative py-1.5 px-0.5 sm:px-1 rounded-lg bg-[#131620] hover:bg-[#191D2A] border border-white/10 hover:border-white/20 cursor-pointer text-center block transition-all">
-<input class="peer sr-only" data-price="18000" data-zone="Zona Perianal / Interglútea" name="zona-perianal" type="radio" value="maquina"/>
+<input class="peer sr-only" data-price="18000" data-zone="Perianal / Interglútea" name="zona-perianal" type="radio" value="maquina"/>
 <div class="relative z-10 font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant peer-checked:text-on-primary"><span class="hidden sm:inline">Trimmer</span><span class="sm:hidden">Trim.</span></div>
 <div class="relative z-10 font-label-md text-[11px] sm:text-label-md text-primary peer-checked:text-on-primary">$18.000</div>
 <div class="absolute inset-0 rounded-lg pointer-events-none ring-1 ring-transparent peer-checked:ring-primary peer-checked:bg-primary"></div>
 </label>
 <label class="tech-card relative py-1.5 px-0.5 sm:px-1 rounded-lg bg-[#131620] hover:bg-[#191D2A] border border-white/10 hover:border-white/20 cursor-pointer text-center block transition-all">
-<input class="peer sr-only" data-price="18000" data-zone="Zona Perianal / Interglútea" name="zona-perianal" type="radio" value="presto"/>
+<input class="peer sr-only" data-price="18000" data-zone="Perianal / Interglútea" name="zona-perianal" type="radio" value="presto"/>
 <div class="relative z-10 font-label-sm text-[10px] sm:text-label-sm text-on-surface-variant peer-checked:text-on-primary">Razor</div>
 <div class="relative z-10 font-label-md text-[11px] sm:text-label-md text-primary peer-checked:text-on-primary">$18.000</div>
 <div class="absolute inset-0 rounded-lg pointer-events-none ring-1 ring-transparent peer-checked:ring-primary peer-checked:bg-primary"></div>
@@ -783,7 +783,7 @@ Clear selection
       pubis: 'Pubic Area',
       escroto: 'Scrotum',
       gluteos: 'Glutes',
-      perianal: 'Perianal / Intergluteal Area',
+      perianal: 'Perianal / Interglútea',
       manos: 'Hands',
       pies: 'Feet'
     };
@@ -1120,40 +1120,40 @@ Clear selection
       let hasAny = false;
       lines.push('Hello, administrative quote for DepilaMachos services:');
       lines.push('');
-      lines.push('*Zones to treat*');
+      lines.push('Zones to treat');
       lines.push('──────────────────────');
 
       if (groups.cera.length > 0) {
         hasAny = true;
-        lines.push('*Warm Wax*');
-        groups.cera.forEach(it => lines.push(`• *${it.name}*: ${formatCOP(it.price)}`));
+        lines.push('Warm Wax');
+        groups.cera.forEach(it => lines.push(`• ${it.name}: ${formatCOP(it.price)}`));
         lines.push('');
       }
 
       if (groups.maquina.length > 0) {
         hasAny = true;
-        lines.push('*Electric Trimmer*');
-        groups.maquina.forEach(it => lines.push(`• *${it.name}*: ${formatCOP(it.price)}`));
+        lines.push('Electric Trimmer');
+        groups.maquina.forEach(it => lines.push(`• ${it.name}: ${formatCOP(it.price)}`));
         lines.push('');
       }
 
       if (groups.presto.length > 0) {
         hasAny = true;
-        lines.push('*Traditional Razor*');
-        groups.presto.forEach(it => lines.push(`• *${it.name}*: ${formatCOP(it.price)}`));
+        lines.push('Traditional Razor');
+        groups.presto.forEach(it => lines.push(`• ${it.name}: ${formatCOP(it.price)}`));
         lines.push('');
       }
 
       if (groups.admin.length > 0) {
         hasAny = true;
-        lines.push('*Special Rate (Admin)*');
-        groups.admin.forEach(it => lines.push(`• *${it.name}*: ${formatCOP(it.price)}`));
+        lines.push('Special Rate (Admin)');
+        groups.admin.forEach(it => lines.push(`• ${it.name}: ${formatCOP(it.price)}`));
         lines.push('');
       }
 
       if (hasMasaje) {
         hasAny = true;
-        lines.push(`• *Relaxing Massage*${isMassageCustom ? ' (Special Rate)' : ''}: ${formatCOP(massagePrice)}`);
+        lines.push(`• Relaxing Massage${isMassageCustom ? ' (Special Rate)' : ''}: ${formatCOP(massagePrice)}`);
         lines.push('');
       }
 
@@ -1166,11 +1166,10 @@ Clear selection
       if (lines[lines.length - 1] === '') lines.pop();
 
       lines.push('──────────────────────');
-      lines.push(`💰 *ESTIMATED TOTAL:* ${formatCOP(total)} COP`);
+      lines.push(`ESTIMATED TOTAL: ${formatCOP(total)} COP`);
       lines.push('──────────────────────');
 
-      const fullMessage = lines.join('
-');
+      const fullMessage = lines.join('\n');
       rawMessageTextarea.value = fullMessage;
       btnWhatsapp.href = 'https://wa.me/573138934136?text=' + encodeURIComponent(fullMessage);
     }
