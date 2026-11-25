@@ -762,16 +762,16 @@ Limpiar selección
   (function() {
     const DYNAMIC_PRICES = {
       espalda: {
-        completa: { cera: 46000, maquina: 23000, presto: 33000, label: 'Espalda Completa' },
+        completa: { cera: 46000, maquina: 23000, presto: 33000, label: 'Espalda Completa', customLabel: 'Espalda' },
         alta: { cera: 28000, maquina: 14000, presto: 20000, label: 'Espalda (Solo Alta)' },
         baja: { cera: 18000, maquina: 9000, presto: 13000, label: 'Espalda (Solo Baja)' }
       },
       brazos: {
-        completos: { cera: 60000, maquina: 30000, presto: 42000, label: 'Brazos Completos' },
+        completos: { cera: 60000, maquina: 30000, presto: 42000, label: 'Brazos Completos', customLabel: 'Brazos' },
         mitad: { cera: 30000, maquina: 15000, presto: 21000, label: 'Mitad Brazo' }
       },
       piernas: {
-        completas: { cera: 68000, maquina: 34000, presto: 48000, label: 'Piernas Completas' },
+        completas: { cera: 68000, maquina: 34000, presto: 48000, label: 'Piernas Completas', customLabel: 'Piernas' },
         mitad: { cera: 34000, maquina: 17000, presto: 24000, label: 'Media Pierna' }
       }
     };
@@ -853,15 +853,14 @@ Limpiar selección
         if (this.dataset.waschecked === 'true') {
           this.checked = false;
           this.dataset.waschecked = 'false';
-        } else {
-          const siblings = document.querySelectorAll(`input[name="${this.name}"]`);
-          siblings.forEach(s => s.dataset.waschecked = 'false');
-          this.dataset.waschecked = 'true';
-
           if (adminInput) {
             adminInput.value = '';
             updateAdminTileHighlight(adminInput);
           }
+        } else {
+          const siblings = document.querySelectorAll(`input[name="${this.name}"]`);
+          siblings.forEach(s => s.dataset.waschecked = 'false');
+          this.dataset.waschecked = 'true';
         }
         recalculate();
       });
@@ -871,12 +870,16 @@ Limpiar selección
     adminInputs.forEach(input => {
       input.addEventListener('input', function() {
         const zoneKey = this.dataset.adminZone;
-        if (zoneKey && zoneKey !== 'masaje') {
-          const radios = document.querySelectorAll(`input[name="zona-${zoneKey}"]`);
-          radios.forEach(r => {
-            r.checked = false;
-            r.dataset.waschecked = 'false';
-          });
+        const val = parseFloat(this.value);
+        if (zoneKey && zoneKey !== 'masaje' && !isNaN(val) && val > 0) {
+          const checkedRadio = document.querySelector(`input[name="zona-${zoneKey}"]:checked`);
+          if (!checkedRadio) {
+            const defaultRadio = document.querySelector(`input[name="zona-${zoneKey}"][value="cera"]`);
+            if (defaultRadio) {
+              defaultRadio.checked = true;
+              defaultRadio.dataset.waschecked = 'true';
+            }
+          }
         }
         updateAdminTileHighlight(this);
         recalculate();
@@ -980,37 +983,27 @@ Limpiar selección
       const groupedByTechnique = {
         cera: [],
         maquina: [],
-        presto: [],
-        admin: []
+        presto: []
       };
 
       // 1. Process Dynamic Zones
       ['espalda', 'brazos', 'piernas'].forEach(key => {
         const adminInput = document.querySelector(`input[data-admin-zone="${key}"]`);
         const adminVal = adminInput ? parseFloat(adminInput.value) : 0;
+        const hasCustom = !isNaN(adminVal) && adminVal > 0;
         const varObj = DYNAMIC_PRICES[key][currentVariants[key]];
+        const checkedRadio = document.querySelector(`input[name="zona-${key}"]:checked`);
 
-        if (!isNaN(adminVal) && adminVal > 0) {
+        if (checkedRadio || hasCustom) {
           count++;
-          total += adminVal;
-          groupedByTechnique.admin.push({
-            name: varObj.label,
-            price: adminVal,
-            isCustom: true
+          const tech = checkedRadio ? checkedRadio.value : 'cera';
+          const price = hasCustom ? adminVal : varObj[tech];
+          total += price;
+          groupedByTechnique[tech].push({
+            name: (hasCustom && varObj.customLabel) ? varObj.customLabel : varObj.label,
+            price: price,
+            isCustom: hasCustom
           });
-        } else {
-          const checkedRadio = document.querySelector(`input[name="zona-${key}"]:checked`);
-          if (checkedRadio) {
-            count++;
-            const tech = checkedRadio.value;
-            const price = varObj[tech];
-            total += price;
-            groupedByTechnique[tech].push({
-              name: varObj.label,
-              price: price,
-              isCustom: false
-            });
-          }
         }
       });
 
@@ -1018,29 +1011,21 @@ Limpiar selección
       ['axilas', 'pecho', 'abdomen', 'pubis', 'escroto', 'gluteos', 'perianal', 'manos', 'pies'].forEach(key => {
         const adminInput = document.querySelector(`input[data-admin-zone="${key}"]`);
         const adminVal = adminInput ? parseFloat(adminInput.value) : 0;
+        const hasCustom = !isNaN(adminVal) && adminVal > 0;
         const zoneName = STATIC_ZONE_LABELS[key];
+        const checkedRadio = document.querySelector(`input[name="zona-${key}"]:checked`);
 
-        if (!isNaN(adminVal) && adminVal > 0) {
+        if (checkedRadio || hasCustom) {
           count++;
-          total += adminVal;
-          groupedByTechnique.admin.push({
+          const tech = checkedRadio ? checkedRadio.value : 'cera';
+          const defaultPrice = checkedRadio ? Number(checkedRadio.getAttribute('data-price')) : Number(document.querySelector(`input[name="zona-${key}"][value="cera"]`).getAttribute('data-price'));
+          const price = hasCustom ? adminVal : defaultPrice;
+          total += price;
+          groupedByTechnique[tech].push({
             name: zoneName,
-            price: adminVal,
-            isCustom: true
+            price: price,
+            isCustom: hasCustom
           });
-        } else {
-          const checkedRadio = document.querySelector(`input[name="zona-${key}"]:checked`);
-          if (checkedRadio) {
-            count++;
-            const tech = checkedRadio.value;
-            const price = Number(checkedRadio.getAttribute('data-price'));
-            total += price;
-            groupedByTechnique[tech].push({
-              name: zoneName,
-              price: price,
-              isCustom: false
-            });
-          }
         }
       });
 
@@ -1066,7 +1051,7 @@ Limpiar selección
 
     function renderSummaryCards(groups, hasMasaje, massagePrice, isMassageCustom) {
       selectedItemsContainer.innerHTML = '';
-      const totalItems = groups.cera.length + groups.maquina.length + groups.presto.length + groups.admin.length + (hasMasaje ? 1 : 0);
+      const totalItems = groups.cera.length + groups.maquina.length + groups.presto.length + (hasMasaje ? 1 : 0);
 
       if (totalItems === 0) {
         if (emptySummaryMessage) {
@@ -1078,21 +1063,19 @@ Limpiar selección
       const techTitles = {
         cera: 'Cera Tibia',
         maquina: 'Máquina al Ras / Eléctrica',
-        presto: 'PrestoBarba',
-        admin: 'Tarifa Especial (Admin)'
+        presto: 'PrestoBarba'
       };
 
-      ['cera', 'maquina', 'presto', 'admin'].forEach(techKey => {
+      ['cera', 'maquina', 'presto'].forEach(techKey => {
         const items = groups[techKey];
         if (items.length > 0) {
           items.forEach(item => {
             const card = document.createElement('div');
-            const isCustom = techKey === 'admin';
-            card.className = `flex items-center justify-between p-space-xs px-space-sm rounded-lg bg-surface-container text-body-sm ${isCustom ? 'border-l-2 border-primary' : ''}`;
+            card.className = `flex items-center justify-between p-space-xs px-space-sm rounded-lg bg-surface-container text-body-sm ${item.isCustom ? 'border-l-2 border-primary' : ''}`;
             card.innerHTML = `
               <div class="flex flex-col">
                 <span class="text-ivory-white font-label-md">${item.name}</span>
-                <span class="${isCustom ? 'text-primary' : 'text-outline'} text-label-sm">${techTitles[techKey]}</span>
+                <span class="text-outline text-label-sm">${techTitles[techKey]}</span>
               </div>
               <span class="relative z-10 font-label-md text-primary font-semibold">${formatCOP(item.price)}</span>
             `;
@@ -1107,7 +1090,7 @@ Limpiar selección
         mCard.innerHTML = `
           <div class="flex flex-col">
             <span class="text-ivory-white font-label-md">Masaje Relajante Integral</span>
-            <span class="${isMassageCustom ? 'text-primary' : 'text-secondary'} text-label-sm">${isMassageCustom ? 'Tarifa Especial (Admin)' : 'Sesión 60 Minutos'}</span>
+            <span class="text-secondary text-label-sm">Sesión 60 Minutos</span>
           </div>
           <span class="relative z-10 font-label-md text-gold-light font-semibold">${formatCOP(massagePrice)}</span>
         `;
@@ -1142,16 +1125,9 @@ Limpiar selección
         lines.push('');
       }
 
-      if (groups.admin.length > 0) {
-        hasAny = true;
-        lines.push('Tarifa Especial (Admin)');
-        groups.admin.forEach(it => lines.push(`• ${it.name}: ${formatCOP(it.price)}`));
-        lines.push('');
-      }
-
       if (hasMasaje) {
         hasAny = true;
-        lines.push(`• Masaje Relajante${isMassageCustom ? ' (Tarifa Especial)' : ''}: ${formatCOP(massagePrice)}`);
+        lines.push(`• Masaje Relajante: ${formatCOP(massagePrice)}`);
         lines.push('');
       }
 
